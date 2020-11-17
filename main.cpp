@@ -1,12 +1,13 @@
 #include <string>
 #include <array>
+#include <ostream>
 
 using namespace std;
 
 #define INF 9999
 int gsize = 0;
 
-void dijkstra(int graph[10][10], int size, int start) {
+void dijkstra(int graph[6][6], int size, int start) {
     int distance[size];
     int shortest[size];
     for(int i = 0; i<size; i++) {
@@ -62,7 +63,7 @@ int main() {
                   {7, 0, 8, 0, 6, 0, 12},
                   {0, 0, 0, 0, 8, 12, 0} };
  
-   dijkstra(b, sizeb, 3);
+   //dijkstra(b, sizeb, 3);
    
                   
 }
