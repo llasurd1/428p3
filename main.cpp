@@ -23,7 +23,7 @@ void dijkstra(vector<vector<int>> graph, int size, int start) {
     }
     for(int i = 0; i<size-1; i++) {
         int index;
-        int short = 9999;
+        
         for(int j = 0; j<size; j++) {
                if((distance[j]<=short) && (shortest[j]==0)) {
                     short = distance[j];
