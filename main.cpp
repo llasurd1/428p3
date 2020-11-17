@@ -7,7 +7,7 @@ using namespace std;
 #define INF 9999
 int gsize = 0;
 
-void dijkstra(int graph**, int size, int start) {
+void dijkstra(int graph[gsize][gsize], int size, int start) {
     int distance[size];
     int shortest[size];
     for(int i = 0; i<size; i++) {
@@ -45,7 +45,7 @@ void dijkstra(int graph**, int size, int start) {
 int main() {
    int sizea = 6;
    gsize = 6;
-   int a** = { {0, 2, 5, 1, 0, 0},
+   int a[gsize][gsize] = { {0, 2, 5, 1, 0, 0},
                    {2, 0, 3, 2, 0, 0},
                    {5, 3, 0, 3, 1, 5},
                    {1, 2, 3, 0, 1, 0},
@@ -55,7 +55,7 @@ int main() {
   
   int sizeb = 7;
   gsize = 7;
-  int b** = { {0, 2, 4, 0, 0, 7, 0}, 
+  int b[gsize][gsize] = { {0, 2, 4, 0, 0, 7, 0}, 
                   {2, 0, 3, 3, 0, 0, 0},
                   {4, 3, 0, 4, 3, 8, 0},
                   {0, 3, 4, 0, 6, 0, 0},
