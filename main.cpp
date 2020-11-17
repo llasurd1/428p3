@@ -5,7 +5,7 @@ using namespace std;
 
 #define INF 9999
 
-void dijkstra(int graph[][], int size, int start) {
+void dijkstra(int graph[size][size], int size, int start) {
     int distance[size];
     int shortest[size];
     for(int i = 0; i<size; i++) {
