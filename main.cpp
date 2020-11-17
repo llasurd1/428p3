@@ -1,13 +1,14 @@
 #include <string>
 #include <array>
 #include <ostream>
+#include <vector>
 
 using namespace std;
 
 #define INF 9999
 int gsize = 0;
 
-void dijkstra(int graph[gsize][gsize], int size, int start) {
+void dijkstra(vector<vector<int>>, int size, int start) {
     int distance[size];
     int shortest[size];
     for(int i = 0; i<size; i++) {
@@ -45,7 +46,7 @@ void dijkstra(int graph[gsize][gsize], int size, int start) {
 int main() {
    int sizea = 6;
    gsize = 6;
-   int a[gsize][gsize] = { {0, 2, 5, 1, 0, 0},
+   vector<vector<int>> a{ {0, 2, 5, 1, 0, 0},
                    {2, 0, 3, 2, 0, 0},
                    {5, 3, 0, 3, 1, 5},
                    {1, 2, 3, 0, 1, 0},
@@ -53,7 +54,7 @@ int main() {
                    {0, 0, 5, 0, 2, 0} };       
   dijkstra(a, sizea, 0);
   
-  int sizeb = 7;
+  /*int sizeb = 7;
   gsize = 7;
   int b[gsize][gsize] = { {0, 2, 4, 0, 0, 7, 0}, 
                   {2, 0, 3, 3, 0, 0, 0},
@@ -63,7 +64,7 @@ int main() {
                   {7, 0, 8, 0, 6, 0, 12},
                   {0, 0, 0, 0, 8, 12, 0} };
  
-   dijkstra(b, sizeb, 3);
+   dijkstra(b, sizeb, 3);*/
    
                   
 }
