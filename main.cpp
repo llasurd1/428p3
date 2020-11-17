@@ -4,8 +4,9 @@
 using namespace std;
 
 #define INF 9999
+int gsize = 0;
 
-void dijkstra(int graph[size][size], int size, int start) {
+void dijkstra(int graph[gsize][gsize], int size, int start) {
     int distance[size];
     int shortest[size];
     for(int i = 0; i<size; i++) {
@@ -42,14 +43,17 @@ void dijkstra(int graph[size][size], int size, int start) {
 
 int main() {
    int sizea = 6;
+   gsize = 6;
    int a[sizea][sizea] = { {0, 2, 5, 1, 0, 0},
                    {2, 0, 3, 2, 0, 0},
                    {5, 3, 0, 3, 1, 5},
                    {1, 2, 3, 0, 1, 0},
                    {0, 0, 1, 1, 0, 2},
-                   {0, 0, 5, 0, 2, 0} };              
+                   {0, 0, 5, 0, 2, 0} };       
+  dijkstra(a, sizea, 0);
   
   int sizeb = 7;
+  gsize = 7;
   int b[sizeb][sizeb] = { {0, 2, 4, 0, 0, 7, 0}, 
                   {2, 0, 3, 3, 0, 0, 0},
                   {4, 3, 0, 4, 3, 8, 0},
@@ -57,7 +61,7 @@ int main() {
                   {0, 0, 3, 6, 0, 6, 8},
                   {7, 0, 8, 0, 6, 0, 12},
                   {0, 0, 0, 0, 8, 12, 0} };
-   dijkstra(a, sizea, 0);
+ 
    dijkstra(b, sizeb, 3);
    
                   
