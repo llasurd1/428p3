@@ -8,7 +8,7 @@ using namespace std;
 #define INF 9999
 int gsize = 0;
 
-void dijkstra(vector<vector<int>>, int size, int start) {
+void dijkstra(vector<vector<int>> graph, int size, int start) {
     int distance[size];
     int shortest[size];
     for(int i = 0; i<size; i++) {
