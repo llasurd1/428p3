@@ -31,9 +31,9 @@ void dijkstra(vector<vector<int>> graph, int size, int start) {
         }
         shortest[index] = 1;
         for(int j = 0; j<size; j++) {
-            int new = distance[index] + graph[index][j];
-            if((shortest[j]==0) && (graph[index][j]!=0) && (distance[index]!=INF) && (new<distance[j])) {
-                distance[j] = new;
+            int newt = distance[index] + graph[index][j];
+            if((shortest[j]==0) && (graph[index][j]!=0) && (distance[index]!=INF) && (newt<distance[j])) {
+                distance[j] = newt;
             }
         }
     }
