@@ -49,9 +49,9 @@ void dijkstra(vector<vector<int>> graph, int size, int start) {
         }
     }
     //printing
-    cout << "Node   Min Distance" << endl;
+    cout << "Node   Min Distance From Node: " << start << endl;
     for(int i = 0; i<size; i++) {
-        cout << i << "   " <<  distance[i] << endl;
+        cout << i << "          " <<  distance[i] << endl;
     }
 }
 
