@@ -32,7 +32,6 @@ void dijkstra(vector<vector<int>> graph, int size, int start) {
         shortest[index] = 1;
         for(int j = 0; j<size; j++) {
             int newt = distance[index] + graph[index][j];
-            cout << newt << endl;
             if((shortest[j]==0) && (graph[index][j]) && (distance[index]!=INF) && (newt<distance[j])) {
                 distance[j] = newt;
             }
@@ -53,9 +52,9 @@ int main() {
                    {0, 0, 1, 1, 0, 2},
                    {0, 0, 5, 0, 2, 0} };       
   dijkstra(a, sizea, 0);
-  
-  /*int sizeb = 7;
-  int b[gsize][gsize] = { {0, 2, 4, 0, 0, 7, 0}, 
+    
+  int sizeb = 7;
+  vector<vector<int>> b{ {0, 2, 4, 0, 0, 7, 0}, 
                   {2, 0, 3, 3, 0, 0, 0},
                   {4, 3, 0, 4, 3, 8, 0},
                   {0, 3, 4, 0, 6, 0, 0},
@@ -63,7 +62,7 @@ int main() {
                   {7, 0, 8, 0, 6, 0, 12},
                   {0, 0, 0, 0, 8, 12, 0} };
  
-   dijkstra(b, sizeb, 3);*/
+   dijkstra(b, sizeb, 3);
    
                   
 }
