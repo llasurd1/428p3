@@ -7,7 +7,6 @@
 using namespace std;
 
 #define INF 9999
-int gsize = 0;
 
 void dijkstra(vector<vector<int>> graph, int size, int start) {
     int distance[size];
@@ -33,7 +32,7 @@ void dijkstra(vector<vector<int>> graph, int size, int start) {
         shortest[index] = 1;
         for(int j = 0; j<size; j++) {
             int newt = distance[index] + graph[index][j];
-            if((shortest[j]==0) && (graph[index][j]!=0) && (distance[index]!=INF) && (newt<distance[j])) {
+            if((shortest[j]==0) && (graph[index][j]) && (distance[index]!=INF) && (newt<distance[j])) {
                 distance[j] = newt;
             }
         }
@@ -46,7 +45,6 @@ void dijkstra(vector<vector<int>> graph, int size, int start) {
 
 int main() {
    int sizea = 6;
-   gsize = 6;
    vector<vector<int>> a{ {0, 2, 5, 1, 0, 0},
                    {2, 0, 3, 2, 0, 0},
                    {5, 3, 0, 3, 1, 5},
@@ -56,7 +54,6 @@ int main() {
   dijkstra(a, sizea, 0);
   
   /*int sizeb = 7;
-  gsize = 7;
   int b[gsize][gsize] = { {0, 2, 4, 0, 0, 7, 0}, 
                   {2, 0, 3, 3, 0, 0, 0},
                   {4, 3, 0, 4, 3, 8, 0},
